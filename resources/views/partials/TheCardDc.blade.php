@@ -5,6 +5,8 @@
 
     <div class="card-body">
         <div class="card-title text-uppercase">{{ $DcCard["title"] }}</div>
+        
+        {{-- queste mi serviranno domani, dove dovrò costruire il layout finale --}}
         {{-- <div> {{ $DcCard["description"]}}</div> --}}
         {{-- <div>{{$DcCard["price"]}}</div> --}}
         
