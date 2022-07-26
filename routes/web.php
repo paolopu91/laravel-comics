@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// route home
 Route::get('/', function () {
-    return view('app');
+    return view('home');
 });
+
+
+// route for my comics
+Route::get('/books', function () {
+    $books = config("comics");
+
+    return view("books", compact("books"));
+})->name("books");
