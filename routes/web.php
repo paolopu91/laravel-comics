@@ -20,8 +20,8 @@ Route::get('/', function () {
 
 
 // route for my comics
-Route::get('/books', function () {
-    $books = config("comics");
+Route::get('/CardDc', function () {
+    $DcCard = config("comics");
 
-    return view("books", compact("books"));
-})->name("books");
+    return view("CardDc", compact("books"));
+})->name("CardDc");
