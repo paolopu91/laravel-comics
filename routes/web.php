@@ -26,6 +26,12 @@ Route::get('/TheCardDc', function () {
     return view("CardDc", compact("books"));
 })->name("CardDc");
 
+
+
+
+
+
+
 Route::get('/CardDc/{id}', function($id){
        $products = config("comics.php");
 
