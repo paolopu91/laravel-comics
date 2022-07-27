@@ -22,15 +22,15 @@
                     <div class="container-green">
                         <div>
                             {{-- container left --}}
-                            <div class="d-flex justify-content-around">
+                            <div class="d-flex justify-content-around bg-success">
                                 <span>{{ "U.S. Price" . $DcCard ['price']}}</span>
                                 <span> {{"AVAILABLE"}} </span>
                                 <span>Check Availability</span>
                             </div>
 
                             {{-- description --}}
-                            <div class="py-5">
-                                <p>
+                            <div class="py-3">
+                                <p class="text-secondary">
                                     {{$DcCard['description']}}
                                 </p>
                             </div>
@@ -51,10 +51,10 @@
         <div class="border-bottom"></div>
 
         {{-- container talent e specs --}}
-        <div class="container pt-5 text-primary pb-5">
+        <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col">
-                    <h6 class="">TALENT</h6>
+                    <h4 class="text-secondary pb-3">TALENT</h4>
 
                     <div class="border-bottom"></div>
 
@@ -63,7 +63,7 @@
                             <h6>Artist:</h6>
                         </div>
                         <div class="pt-3 artist-names">
-                            <p>{{ implode(',', $DcCard['artists']) }}</p>
+                            <p class="text-primary">{{ implode(',', $DcCard['artists']) }}</p>
                         </div>
                     </div>
 
@@ -72,18 +72,18 @@
                     <div class="d-flex justify-content-between">
 
                         <div class="pt-3">
-                            <h6>Written By:</h6>
+                            <h6 class="text-secondary">Written By:</h6>
                         </div>
 
                         <div class="pt-3 writers-names">
-                            <p>{{ implode(',', $DcCard['writers']) }}</p>
+                            <p class="text-primary">{{ implode(',', $DcCard['writers']) }}</p>
                         </div>
 
                     </div>
 
                 </div>
                 <div class="col">
-                    <h6>Specs</h6>
+                    <h4 class="text-secondary pb-3">Specs</h4>
 
                     <div class="border-bottom"></div>
 
@@ -92,7 +92,7 @@
                             <h6>Series:</h6>
                         </div>
                         <div class="pt-3 artist-names">
-                            <p>{{ $DcCard['series'] }}</p>
+                            <p class="text-primary">{{ $DcCard['series'] }}</p>
                         </div>
                     </div>
                     <div class="border-bottom"></div>
@@ -101,7 +101,7 @@
                             <h6>U.S. Price:</h6>
                         </div>
                         <div class="pt-3 artist-names">
-                            <p>{{ $DcCard['price'] }}</p>
+                            <p class="text-primary">{{ $DcCard['price'] }}</p>
                         </div>
                     </div>
                     <div class="border-bottom"></div>   
@@ -110,7 +110,7 @@
                             <h6>On Sale Date:</h6>
                         </div>
                         <div class="pt-3 artist-names">
-                            <p>{{"Oct 02 2018"}}</p>
+                            <p class="text-primary">{{"Oct 02 2018"}}</p>
                         </div>
                     </div>
                     <div class="border-bottom"></div>
@@ -122,7 +122,7 @@
         {{-- border bottom div --}}
         <div class="border-bottom"></div>
         
-        
+
     </div>
 @endsection
     
