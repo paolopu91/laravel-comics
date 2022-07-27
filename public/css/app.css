@@ -185,3 +185,23 @@ h4 {
   background-size: cover;
 }
 
+.blu-section {
+  height: 100px;
+  background-color: #0082f9;
+}
+
+.card-dc-position {
+  position: relative;
+  bottom: 190px;
+}
+
+.artist-names {
+  font-size: 15px;
+  width: 50%;
+}
+
+.writers-names {
+  font-size: 15px;
+  width: 50%;
+}
+

@@ -20,11 +20,11 @@ Route::get('/', function () {
 
 
 // route for my comics
-Route::get('/TheCardDc', function () {
+Route::get('/Dc/index', function () {
     $DcCard = config("comics");
 
-    return view("CardDc", compact("books"));
-})->name("CardDc");
+    return view("Dc.index", compact("DcCard"));
+})->name("Dc.index");
 
 
 
@@ -32,8 +32,26 @@ Route::get('/TheCardDc', function () {
 
 
 
-Route::get('/CardDc/{id}', function($id){
-       $products = config("comics.php");
+Route::get('/Dc/{id}', function($id){
+
+        $currentCardDc = config("comics");
+        $DcCardSelected = null;
+
+       foreach ($currentCardDc as $DcCard) {
+        if($DcCard["id"] === intval($id)){
+            $DcCardSelected = $DcCard;
+            break;
+        }
+        };
+        
+        if(is_null($DcCardSelected)){
+            abort(404);
+        };
+        return view("Dc.show" , [
+            "DcCard" =>$DcCardSelected
+        ]);
+
+})->name("Dc.show");
 
 //     //filtrare i prodotti e recuperare quello che ha lo stesso id
 //     //che voglio ottenere come parametro nell'url
@@ -52,4 +70,3 @@ Route::get('/CardDc/{id}', function($id){
     //         break;
     //     }
     // };
-});

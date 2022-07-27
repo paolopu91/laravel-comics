@@ -1,6 +1,6 @@
 <div>
     <div class="card-image">
-        <img src="{{ $DcCard["thumb"] }}" alt="{{ $DcCard["series"] }}" />
+        <a href=" {{ route("Dc.show", $DcCard['id']) }} "><img src="{{ $DcCard["thumb"] }}" alt="{{ $DcCard["series"] }}" /></a>
     </div>
 
     <div class="card-body">
